@@ -4,12 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport"
     content="width=device-width, initia-scale=1, shrink-to-fit=no">
+    <!--
     <link href="style.css" rel="stylesheet">
+    -->
     <title>Project Descriptions</title>
   </head>
   <body>
-    <div class="construction-wrapper">
-      <img src="under-construction-pika.gif" alt="Site is under construction">
+    <div class="wrap">
+      <div class="contents-wrap">
+        <ul class="contents-ul">
+          <li>
+            C++
+            <ul class="contents-ul-nested">
+              <li><a href="#callVM" alt="">Abstracted virtual machine calls for JIT compiler operations</a></li>
+              <li><a href="str-plus-bool" alt="">CacheIR support for String + Boolean</a></li>
+              <li><a href="updatedstub" alt="">Collapse ICCacheIR_UpdatedStub into ICUpdatedStub</a></li>
+              <li><a href="flush" alt="">Optionally flush CacheIR spew more frequently</a></li>
+            </ul>
+          </li>
+            JavaScript
+            <ul class="contents-ul-nested">
+              <li><a href="" alt="">Google Maps API integration</a></li>
+              <li><a href="" alt="">cacheIR_analyzer</a></li>
+              <li><a href="" alt="">Network tab protocol column shows "HTTP/2.0+h2" when individual requests are selected</a></li>
+            </ul>
+          <li>
+            Rust
+            <ul class="contents-ul-nested">
+              <li><a href="" alt="">Unifying `wasm` and `compiler` subcommand output</a></li>
+              <li><a href="" alt="">Verifier issue</a></li>
+            </ul>
+          </li>
+          <li>
+            Python
+            <ul class="contents-ul-nested">
+              <li><a href="" alt="">Endpoint API project</a></li>
+            </ul>
+          </li>
+          <li>
+            HTML/CSS/React/Front end
+            <ul class="contents-ul-nested">
+              <li><a href="" alt="">Edit and Resend should use proper styling for input fields</a></li>
+              <li><a href="" alt="">The Old Try front end changes</a></li>
+              <li><a href="" alt="">Debugger svg change</a></li>
+              <li><a href="" alt="">Unfinished debugger accessibility issue</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class="contents-ul-nested">
+            </ul>
+          </li>
+      </div>
+      <div class="proj-lang-wrap" id="cpp">
+        <h2 class="proj-lang-header">C++</h2>
+        <ul class="proj-lang-ul">
+          <li id="callVM">
+          <h4 class="proj-title">Abstracted virtual machine calls for JIT compiler operations</h4>
+          <p class="proj-descr">Some operations shared between stubs of the Just-In-Time (JIT) compilers of
+SpiderMonkey, IonMonkey and Baseline, only differed in their implementions of
+entering and leaving their respective stub frames. This project created a wrapper
+class in the base class JIT stub compiler that unified IonMonkey and Baseline compiler
+methods implementing these operations.
+</p>
+          </li>
+          <li id="str-plus-bool">
+            <h4 class="proj-title">
+CacheIR support for String + Boolean
+            </h4>
+            <p class="proj-descr">
+            <a href="https://jandemooij.nl/blog/2017/01/25/cacheir/" alt="cacheIR-description">CacheIR</a> is a bytecode that creates Inline Cache (IC) stubs that SpiderMonkey
+uses to optimize certain operations. This project added support for String plus Boolean
+binary arithmetic as defined by EMCAScript 6 to the CacheIR.
+            </p>
+          </li>
+          <li id="updatedstub">
+            <h4 class="proj-title">
+Collapse ICCacheIR_UpdatedStub into ICUpdatedStub
+            </h4>
+            <p class="proj-descr">
+A CacheIR version of a stub kind class had completely subsumed the base class.
+In this project, I collapsed the two together to address the redundant distincion
+in classes. This project involved integrating changes seamlessly in the larger
+SpiderMonkey ecosystem. Careful attention was paid to packing the member fields
+of the resulting class based on alignment in memory in order to optimize memory
+usage.
+            </p>
+          </li>
+          <li id="flush">
+            <h4 class="proj-title">
+Optionally flush CacheIR spew more frequently
+            </h4>
+            <p class="proj-descr">
+CacheIR logs of IC stubs can be emitted as JSON for debugging purposes by setting an environment
+variable. Crashes during log emitting caused the logs to be truncated, making
+troubleshooting difficult. For this project, I altered the flushing behavior of the logs,
+so that in the event of a crash the logs are not truncated. Additionally, I implemented
+a feature whereby frequency of log emission can be controlled with an environment variable,
+enabling a developer to alter log emission frequency as needed.
+            </p>
+          </li>
+          <li id="">
+            <h4 class="proj-title">
+            </h4>
+            <p class="proj-descr">
+            </p>
+          </li>
+          <li id="">
+            <h4 class="proj-title">
+            </h4>
+            <p class="proj-descr">
+            </p>
+          </li>
+      </div>
+      <div class="proj-lang-wrap">
+        <h2 class="proj-lang-header">Me</h2>
+        <ul class="proj-lang-ul">
+          <li></li>
+      </div>
+      <div class="proj-lang-wrap">
+        <h2 class="proj-lang-header">Me</h2>
+        <ul class="proj-lang-ul">
+          <li></li>
+      </div>
+      <div class="proj-lang-wrap">
+        <h2 class="proj-lang-header">Me</h2>
+        <ul class="proj-lang-ul">
+          <li></li>
+      </div>
+      <div class="proj-lang-wrap">
+        <h2 class="proj-lang-header">Me</h2>
+        <ul class="proj-lang-ul">
+          <li></li>
+      </div>
+    </div>
+    <div id="overlay">
+        <img id="construction-img" src="documents/under-construction-pika-trimmed.gif" alt="Site is under construction">
     </div>
   </body>
 </html>
