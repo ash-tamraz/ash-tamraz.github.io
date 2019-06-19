@@ -40,10 +40,20 @@
   margin-bottom: 2%;
 }
 
+a:link {
+  color: #ffcccc;
+}
+
+a:visited {
+  color: #ccccff;
+}
+
 body {
   font-size: 1.4em;
   font-family: sans-serif;
   position: relative;
+  background: black;
+  color: #9a9494;
 }
 
 .bio-ul {
