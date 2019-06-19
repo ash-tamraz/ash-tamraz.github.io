@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-    content="width=device-width, initia-scale=1, shrink-to-fit=no">
-    <!--
+    content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
-    -->
     <title>Project Descriptions</title>
   </head>
   <body>
@@ -17,48 +15,51 @@
             C++
             <ul class="contents-ul-nested">
               <li><a href="#callVM" alt="">Abstracted virtual machine calls for JIT compiler operations</a></li>
-              <li><a href="str-plus-bool" alt="">CacheIR support for String + Boolean</a></li>
-              <li><a href="updatedstub" alt="">Collapse ICCacheIR_UpdatedStub into ICUpdatedStub</a></li>
-              <li><a href="flush" alt="">Optionally flush CacheIR spew more frequently</a></li>
+              <li><a href="#str-plus-bool" alt="">CacheIR support for String + Boolean</a></li>
+              <li><a href="#updatedstub" alt="">Collapse ICCacheIR_UpdatedStub into ICUpdatedStub</a></li>
+              <li><a href="#flush" alt="">Optionally flush CacheIR spew more frequently</a></li>
             </ul>
           </li>
+          <li>
             JavaScript
             <ul class="contents-ul-nested">
-              <li><a href="" alt="">Google Maps API integration</a></li>
-              <li><a href="" alt="">cacheIR_analyzer</a></li>
-              <li><a href="" alt="">Network tab protocol column shows "HTTP/2.0+h2" when individual requests are selected</a></li>
+              <li><a href="#gmapsAPI" alt="">Google Maps API integration</a></li>
+              <li><a href="#cacheIRanalyzer" alt="">cacheIR_analyzer</a></li>
+              <li><a href="#httpProtocols" alt="">Network tab protocol column shows "HTTP/2.0+h2" when individual requests are selected</a></li>
             </ul>
+          </li>
           <li>
             Rust
             <ul class="contents-ul-nested">
-              <li><a href="" alt="">Unifying `wasm` and `compiler` subcommand output</a></li>
-              <li><a href="" alt="">Verifier issue</a></li>
+              <li><a href="#wasmAndCompiler" alt="">Unifying `wasm` and `compiler` subcommand output</a></li>
+<!-- Commenting out until I finish descriptions
+              <li><a href="#verifier" alt="">Verifier issue</a></li>
+-->
             </ul>
           </li>
+<!-- Commenting out until I finish descriptions
           <li>
             Python
             <ul class="contents-ul-nested">
-              <li><a href="" alt="">Endpoint API project</a></li>
+              <li><a href="#flaskEndpoint" alt="">Endpoint API project</a></li>
             </ul>
           </li>
           <li>
             HTML/CSS/React/Front end
             <ul class="contents-ul-nested">
-              <li><a href="" alt="">Edit and Resend should use proper styling for input fields</a></li>
-              <li><a href="" alt="">The Old Try front end changes</a></li>
-              <li><a href="" alt="">Debugger svg change</a></li>
-              <li><a href="" alt="">Unfinished debugger accessibility issue</a></li>
+              <li><a href="#editAndResend" alt="">Edit and Resend should use proper styling for input fields</a></li>
+              <li><a href="#oldtry" alt="">The Old Try front end changes</a></li>
+              <li><a href="#debugSvg" alt="">Debugger svg change</a></li>
+              <li><a href="#debugAccess" alt="">Debugger accessibility issue</a></li>
             </ul>
           </li>
-          <li>
-            <ul class="contents-ul-nested">
-            </ul>
-          </li>
+-->
+
       </div>
       <div class="proj-lang-wrap" id="cpp">
         <h2 class="proj-lang-header">C++</h2>
         <ul class="proj-lang-ul">
-          <li id="callVM">
+          <li id="callVM" class="proj-li">
           <h4 class="proj-title">Abstracted virtual machine calls for JIT compiler operations</h4>
           <p class="proj-descr">Some operations shared between stubs of the Just-In-Time (JIT) compilers of
 SpiderMonkey, IonMonkey and Baseline, only differed in their implementions of
@@ -67,7 +68,7 @@ class in the base class JIT stub compiler that unified IonMonkey and Baseline co
 methods implementing these operations.
 </p>
           </li>
-          <li id="str-plus-bool">
+          <li id="str-plus-bool" class="proj-li">
             <h4 class="proj-title">
 CacheIR support for String + Boolean
             </h4>
@@ -77,7 +78,7 @@ uses to optimize certain operations. This project added support for String plus 
 binary arithmetic as defined by EMCAScript 6 to the CacheIR.
             </p>
           </li>
-          <li id="updatedstub">
+          <li id="updatedstub" class="proj-li">
             <h4 class="proj-title">
 Collapse ICCacheIR_UpdatedStub into ICUpdatedStub
             </h4>
@@ -90,7 +91,7 @@ of the resulting class based on alignment in memory in order to optimize memory
 usage.
             </p>
           </li>
-          <li id="flush">
+          <li id="flush" class="proj-li">
             <h4 class="proj-title">
 Optionally flush CacheIR spew more frequently
             </h4>
@@ -103,38 +104,130 @@ a feature whereby frequency of log emission can be controlled with an environmen
 enabling a developer to alter log emission frequency as needed.
             </p>
           </li>
-          <li id="">
+
+          <li id="" class="proj-li">
             <h4 class="proj-title">
             </h4>
             <p class="proj-descr">
             </p>
           </li>
-          <li id="">
+      </div>
+      <div class="proj-lang-wrap">
+        <h2 class="proj-lang-header">JavaScript</h2>
+        <ul class="proj-lang-ul">
+          <li id="gmapsAPI" class="proj-li">
             <h4 class="proj-title">
+Google Maps API integration
+            </h4>
+              <img src="search-1.gif" alt="Store search function example" class="example-gif">
+            <p class="proj-descr">
+
+Retrieved data from Google Sheets document as JSON, and used this data to form an array of objects
+that is used to populate a Google Maps Map with markers.
+
+Used Google Maps Geocoder API and Autocomplete API to implement a location search. The user
+enters an address and a search radius, and the map pans to the user's given location. If there
+are locations from the array made above within the provided search radius, the map will resize
+it's bounds to show the locations that are within the radius.
+
+
+            </p>
+          </li>
+          <li id="cacheIRanalyzer" class="proj-li">
+            <h4 class="proj-title">
+Added support for CacheIR instruction bytecode output to cacheIR_analyzer
+
+            </h4>
+            <p class="proj-descr">
+This is a patch for a JQuery script written by a SpiderMonkey developer. The script analyzes
+JSON of CacheIR IC logs, and injects data into an HTML page. CacheIR instruction sequence bytecode
+was added to the creation of CacheIR IC logs after the creation of this script. My patch adds
+support for CacheIR instruction sequence bytecode to the script.
+            </p>
+          </li>
+          <li id="httpProtocols" class="proj-li">
+            <h4 class="proj-title">
+Network tab protocol column shows "HTTP/2.0+h2" when individual requests are selected
+            </h4>
+            <p class="proj-descr">
+In the Network tab of FireFox's Devtools, HTTP protocol values were erroneously being displayed with
+the `x-firefox-spdy` prodocol values appended, e.g. `HTTP/2.0+h2` when the appropriate protocol value
+would be `HTTP/2.0`. I altered the JavaScript which determined the rendering of HTTP protocol values
+so that matching `x-firefox-spdy` values would not be displayed, and added a test for this change
+to the testing framework used for Devtools' JavaScript.
+            </p>
+          </li>
+
+      </div>
+      <div class="proj-lang-wrap">
+        <h2 class="proj-lang-header">Rust</h2>
+        <ul class="proj-lang-ul">
+          <li id="wasmAndCompiler" class="proj-li">
+            <h4 class="proj-title">
+Unifying `wasm` and `compiler` subcommand output
+            </h4>
+            <p class="proj-descr">
+            The `wasm` and `compiler` subcommands of Cranelift, e.g. `cargo run compile -p --target=x86_64 filetests/wasm/i64-compares.clif`,
+            have similar operations, but format their output inconsistenly.
+            The goal here was to unify the output of each respective command,
+            and give it a sense of uniformity and consistency.
+            </p>
+          </li>
+<!-- Commenting out until I finish descriptions
+          <li id="verifier" class="proj-li">
+            <h4 class="proj-title">
+Cranelift: Verifier issue
+            </h4>
+            <p class="proj-descr">
+            TBD
+            </p>
+          </li>
+
+      </div>
+      <div class="proj-lang-wrap">
+        <h2 class="proj-lang-header">Python</h2>
+        <ul class="proj-lang-ul">
+          <li id="#flaskEndpoint" class="proj-li">
+            <h4 class="proj-title">
+Flask Endpoint API for web app API
             </h4>
             <p class="proj-descr">
             </p>
           </li>
+
       </div>
       <div class="proj-lang-wrap">
-        <h2 class="proj-lang-header">Me</h2>
+        <h2 class="proj-lang-header">HTML/CSS/React/Front End</h2>
         <ul class="proj-lang-ul">
-          <li></li>
-      </div>
-      <div class="proj-lang-wrap">
-        <h2 class="proj-lang-header">Me</h2>
-        <ul class="proj-lang-ul">
-          <li></li>
-      </div>
-      <div class="proj-lang-wrap">
-        <h2 class="proj-lang-header">Me</h2>
-        <ul class="proj-lang-ul">
-          <li></li>
-      </div>
-      <div class="proj-lang-wrap">
-        <h2 class="proj-lang-header">Me</h2>
-        <ul class="proj-lang-ul">
-          <li></li>
+          <li id="#editAndResend" class="proj-li">
+            <h4 class="proj-title">
+Edit and Resend should use proper styling for input fields
+            </h4>
+            <p class="proj-descr">
+            </p>
+          </li>
+          <li id="#oldtry" class="proj-li">
+            <h4 class="proj-title">
+The Old Try front end changes
+            </h4>
+            <p class="proj-descr">
+            </p>
+          </li>
+          <li id="#debugSvg" class="proj-li">
+            <h4 class="proj-title">
+Debugger svg change
+            </h4>
+            <p class="proj-descr">
+            </p>
+          </li>
+          <li id="#debugAccess" class="proj-li">
+            <h4 class="proj-title">
+Debugger accessibility issue
+            </h4>
+            <p class="proj-descr">
+            </p>
+          </li>
+-->
       </div>
     </div>
     <div id="overlay">
