@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
-    <link href="documents/style.css" rel="stylesheet">
+    <link href="documents/style.css" rel="stylesheet"/>
+    <script src="documents/script.js"></script>
     <title>My Awesome Website</title>
   </head>
   <body>
+    <nav class="sidebar">
+      <a href="#id">About me</a>
+      <a href="#interests">What I'm interested in</a>
+      <a href="#work">What I've worked on</a>
+      <a href="#contact">Ways to contact me</a>
+    </nav>
     <div class="wrap">
-      <div class="bio-wrap" id="0">
+      <div class="bio-wrap" id="bio">
         <h2 class="bio-header">Me</h2>
         <ul class="bio-ul">
           <li><img class="pic-adam" src="documents/adam-snow-smaller.jpg" alt="me"></li>
@@ -19,7 +26,7 @@
           <li><a id="projects" href="documents/projects.html">Click on this to see a detailed list of my projects</a></li>
         </ul>
       </div>
-      <div class="bio-wrap" id="1">
+      <div class="bio-wrap" id="interests">
         <h2 class="bio-header">Current Interests</h2>
         <ul class="bio-ul">
           <li><h3>Compilers</h3></li>
@@ -34,17 +41,29 @@
           <li>Recently I started working on the Cranelift
           Code Generator.</li>
           <li>JavaScript</li>
+          <li><img id="construction-img" src="documents/under-construction-pika-trimmed.gif" alt="Site is under construction"></li>
         </ul>
       </div>
-      <div class="bio-wrap" id="2">
+      <div class="bio-wrap" id="work">
         <h2 class="bio-header">Recent Work</h2>
+        <ul class="bio-ul">
+          <li><img id="construction-img" src="documents/under-construction-pika-trimmed.gif" alt="Site is under construction"></li>
+        </ul>
       </div>
-      <div class="bio-wrap" id="3">
+      <div class="bio-wrap" id="contact">
         <h2 class="bio-header">Ways to Talk to Me</h2>
+        <ul class="bio-ul">
+          <li>Email: asorholm (char)0x40 gmail.com</li>
+          <li><a href="https://github.com/ash-tamraz" alt="my github">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/adam-holm-077b8716a/" alt="my linkedin">LinkedIn</a></li>
+          <li><a href="https://bugzilla.mozilla.org/user_profile?user_id=624985" alt="bugzilla">Bugzilla</a></li>
+        </ul>
       </div>
     </div>
+<!--
     <div id="overlay">
         <img id="construction-img" src="documents/under-construction-pika-trimmed.gif" alt="Site is under construction">
     </div>
+-->
   </body>
 </html>

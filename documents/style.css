@@ -1,10 +1,65 @@
+/*
+ * Diebenkorn palette
+ * pink/flesh - #e7bcb5
+ * slate blue 1  - #84a2ad
+ * slate blue 2 = #a29faa
+ * tan - #caa682
+ * tan 2 - #ddb582
+ * ochre - #e3a512
+ * olive = #cbab32
+ * lavender = #c4c0d7
+ * teal - #4f8273
+ * purple - #56478c
+ * ochre 2 - #eb9830
+ * dark red = #c12e24
+ * black - #090c1f
+ *
+ * Tucson sunset picture
+ * sky blue - #4f6e9c
+ * light cloud pink - #9c90a4
+ * cloud pink - #d6a698
+ * light sky blue - #769abe
+ * translucent clouds - #b5b2ba
+ * wood - #5f4b44
+ * brick - #311917
+ * stucco - #7d6c62
+ * tree silhouette - #141213
+ */
+
 * {
   box-sizing: border-box;
 }
 
+:root {
+  --sky-blue: #4f6e9c;
+  --sky-blue-dark: #47628d;
+  --light-sky-blue: #769abe;
+  --cloud-light-pink: #9c90a4;
+  --cloud-pink: #d6a698;
+  --cloud-blue: #b5b2ba;
+  --wood: #5f4b44;
+  --brick: #311917;
+  --stucco: #7d6c62;
+  --tree-silhouette: #141213;
+  --dieb-pink: #e7bcb5;
+  --dieb-blue-1: #84a2ad;
+  --dieb-blue-2: #a29faa;
+  --dieb-tan-1: #caa682;
+  --dieb-tan-2: #ddb582;
+  --dieb-ochre-1: #e3a512;
+  --dieb-olive: #cbab32;
+  --dieb-lavender: #c4c0d7;
+  --dieb-teal: #4f8273;
+  --dieb-purple: #56478c;
+  --dieb-ochre-2: #eb9830;
+  --dieb-dark-red: #c12e24;
+  --dieb-black: #090c1f;
+}
+
 @media only screen and (min-width: 400px) {
   .wrap {
-    padding: 10% 10% 0;
+    padding: 2% 1% 0;
+    margin-left: 210px;
   }
   #construction-img {
     width: 190px;
@@ -35,6 +90,35 @@
   padding-left: 0;
 }
 
+.contents-ul {
+  list-style-type: none;
+  padding-left: 3%;
+}
+
+.lang-link:before {
+  content: '\25b8';
+  line-height: 1.6;
+}
+a.active:before {
+  content: '\25be';
+}
+.contents-ul .contents-ul-nested {
+  display: none;
+}
+
+.contents-ul .contents-ul-nested.active {
+  position: fixed;
+  left: 200px;
+  top: 0;
+  background-color: #262626;
+  margin-top: 0;
+  margin-left: 0;
+  padding-bottom: 5%;
+
+  transition: max-height 0.2s ease-out;
+  width: 100%;
+}
+
 .bio-wrap:first-child .bio-ul li {
   margin-top: 2%;
   margin-bottom: 2%;
@@ -52,8 +136,21 @@ body {
   font-size: 1.4em;
   font-family: sans-serif;
   position: relative;
-  background: black;
-  color: #9a9494;
+  background: #333333; /* linear-gradient(135deg, var(--sky-blue-dark), var(--sky-blue), var(--light-sky-blue));*/
+  color: white;
+}
+.sidebar{
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column;
+  background-color: #666666;
+}
+.sidebar * {
+  margin: 1.5em 0.5em 0.5em;
 }
 
 .bio-ul {
@@ -61,6 +158,30 @@ body {
   padding-left: 0;
 }
 
+.bio-ul li {
+  color: #bfbfbf;
+}
+.bio-wrap {
+  /*
+  background: linear-gradient(135deg, rgba(156, 144, 164, 0.5), rgba(214, 166, 152, 0.9));
+  */
+  /*
+  background: rgba(240, 224, 219, 0.8);
+  */
+  padding: 1% 3% 1%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  color: white;
+}
+.bio-header {
+
+  color: white;
+}
+/*
+h3 {
+  color: var(--stucco);
+}
+*/
 #overlay {
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
   display: flex;

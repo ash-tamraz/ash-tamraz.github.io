@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport"
     content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"/>
+    <script src="script.js"></script>
     <title>Project Descriptions</title>
   </head>
   <body>
-    <div class="wrap">
-      <div class="contents-wrap">
+    <nav class="sidebar">
         <ul class="contents-ul">
           <li>
+            <a class="lang-link" href="#" tabindex="0">
             C++
+            </a>
             <ul class="contents-ul-nested">
               <li><a href="#callVM" alt="">Abstracted virtual machine calls for JIT compiler operations</a></li>
               <li><a href="#str-plus-bool" alt="">CacheIR support for String + Boolean</a></li>
@@ -21,7 +23,9 @@
             </ul>
           </li>
           <li>
+            <a class="lang-link" href="#" tabindex="0">
             JavaScript
+            </a>
             <ul class="contents-ul-nested">
               <li><a href="#gmapsAPI" alt="">Google Maps API integration</a></li>
               <li><a href="#cacheIRanalyzer" alt="">cacheIR_analyzer</a></li>
@@ -29,7 +33,9 @@
             </ul>
           </li>
           <li>
+            <a class="lang-link" href="#" tabindex="0">
             Rust
+            </a>
             <ul class="contents-ul-nested">
               <li><a href="#wasmAndCompiler" alt="">Unifying `wasm` and `compiler` subcommand output</a></li>
 <!-- Commenting out until I finish descriptions
@@ -54,6 +60,11 @@
             </ul>
           </li>
 -->
+        </ul>
+    </nav>
+    <div class="wrap">
+      <div class="contents-wrap">
+
 
       </div>
       <div class="proj-lang-wrap" id="cpp">
