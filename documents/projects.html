@@ -32,6 +32,14 @@
               <li><a href="#httpProtocols" alt="">Network tab protocol column shows "HTTP/2.0+h2" when individual requests are selected</a></li>
             </ul>
           </li>
+           <li>
+            <a class="lang-link" href="#" tabindex="0">
+            Web
+            </a>
+            <ul class="contents-ul-nested">
+              <li><a href="#colorchooser" alt="">ANSI Terminal Color Chooser</a></li>
+            </ul>
+          </li>
           <li>
             <a class="lang-link" href="#" tabindex="0">
             Rust
@@ -122,7 +130,7 @@ enabling a developer to alter log emission frequency as needed.
             <p class="proj-descr">
             </p>
           </li>
-      </div>
+      </div> <!-- class="proj-lang-wrap" id="cpp" -->
       <div class="proj-lang-wrap">
         <h2 class="proj-lang-header">JavaScript</h2>
         <ul class="proj-lang-ul">
@@ -162,14 +170,36 @@ Network tab protocol column shows "HTTP/2.0+h2" when individual requests are sel
             </h4>
             <p class="proj-descr">
 In the Network tab of FireFox's Devtools, HTTP protocol values were erroneously being displayed with
-the `x-firefox-spdy` prodocol values appended, e.g. `HTTP/2.0+h2` when the appropriate protocol value
-would be `HTTP/2.0`. I altered the JavaScript which determined the rendering of HTTP protocol values
-so that matching `x-firefox-spdy` values would not be displayed, and added a test for this change
+the x-firefox-spdy prodocol values appended, e.g. <code>HTTP/2.0+h2</code> when the appropriate protocol value
+would be <code>HTTP/2.0</code>. I altered the JavaScript which determined the rendering of HTTP protocol values
+so that matching x-firefox-spdy values would not be displayed, and added a test for this change
 to the testing framework used for Devtools' JavaScript.
             </p>
           </li>
+        </ul> <!-- class="proj-lang-ul" -->
+        </h2>
+      </div> <!-- class="proj-lang-wrap" JavaScript -->
 
-      </div>
+      <div class="proj-lang-wrap">
+        <h2 class="proj-lang-header">Web</h2>
+        <ul class="proj-lang-ul">
+          <li id="colorchooser" class="proj-li">
+            <h4 class="proj-title">ANSI Terminal Color Chooser</h4>
+            <p class="proj-descr">This was a personal project that was turned into my final project
+for a university course on web development. It was initially borne of my frustration with not having
+a tool readily available for viewing ANSI terminal colors stored in <code>rgb.txt</code> in context
+with each other when designing a color scheme for <code>rxvt-unicode</code> terminal emulator.
+
+It uses Express, Node.js, and MongoDB for the backend, and HTML, CSS, and vanilla JavaScript for the
+frontend. The webapp reads <code>rgb.txt</code>, and parses and stores the rgb color values found
+in the file. It then populates the HTML with color values. The user can create a palette with 8
+color values, and can save and load these palettes.</p>
+            <div class="link-github"><img src="GitHub-Mark-Light-32px.png" alt="github mark"><a href="https://github.com/ash-tamraz/color-chooser">Project on GitHub</a></div>
+          </li>
+        </ul> <!-- class="proj-lang-ul" -->
+        </h2>
+      </div> <!-- class="proj-lang-wrap" Web -->
+
       <div class="proj-lang-wrap">
         <h2 class="proj-lang-header">Rust</h2>
         <ul class="proj-lang-ul">
@@ -178,12 +208,15 @@ to the testing framework used for Devtools' JavaScript.
 Unifying `wasm` and `compiler` subcommand output
             </h4>
             <p class="proj-descr">
-            The `wasm` and `compiler` subcommands of Cranelift, e.g. `cargo run compile -p --target=x86_64 filetests/wasm/i64-compares.clif`,
+            The <code>wasm</code> and <code>compiler</code> subcommands of Cranelift, e.g. <code>cargo run compile -p --target=x86_64 filetests/wasm/i64-compares.clif</code>,
             have similar operations, but format their output inconsistenly.
             The goal here was to unify the output of each respective command,
             and give it a sense of uniformity and consistency.
             </p>
           </li>
+        </ul> <!-- class="proj-lang-ul" -->
+        </h2>
+      </div> <!-- class="proj-lang-wrap" Rust -->
 <!-- Commenting out until I finish descriptions
           <li id="verifier" class="proj-li">
             <h4 class="proj-title">
@@ -239,7 +272,6 @@ Debugger accessibility issue
             </p>
           </li>
 -->
-      </div>
     </div>
     <div id="overlay">
         <img id="construction-img" src="documents/under-construction-pika-trimmed.gif" alt="Site is under construction">
